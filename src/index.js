@@ -119,7 +119,11 @@ export function Carousel(props) {
       if (props.autoplay) {
         clearTimeout(intervalRef.current);
         intervalRef.current = setTimeout(() => {
-          nextRef.current.click();
+          try {
+            nextRef.current.click();
+          } catch {
+            console.log('foooooo')
+          }
         }, props.interval);
       }
     } else if (slide[0] && slide[0].class !== activeClass) {
