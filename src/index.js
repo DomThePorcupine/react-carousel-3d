@@ -41,10 +41,19 @@ export function Carousel(props) {
     setSlideCurrent(-1);
     if (slideCurrent === -1) {
       setTimeout(() => {
-        nextRef.current.click();
+        try {
+          nextRef.current.click();
+        } catch {
+          console.log('foooooo')
+        }
+        
         if (props.autoplay) {
           intervalRef.current = setTimeout(() => {
-            nextRef.current.click();
+            try {
+              nextRef.current.click();
+            } catch {
+              console.log('foooooo')
+            }
         }, props.interval);}
       }, 500);
     }
