@@ -44,7 +44,7 @@ export function Carousel(props) {
         try {
           nextRef.current.click();
         } catch {
-          console.log('foooooo')
+          
         }
         
         if (props.autoplay) {
@@ -52,7 +52,7 @@ export function Carousel(props) {
             try {
               nextRef.current.click();
             } catch {
-              console.log('foooooo')
+              
             }
         }, props.interval);}
       }, 500);
@@ -122,7 +122,7 @@ export function Carousel(props) {
           try {
             nextRef.current.click();
           } catch {
-            console.log('foooooo')
+            
           }
         }, props.interval);
       }
